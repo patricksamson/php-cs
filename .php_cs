@@ -46,6 +46,9 @@ return PhpCsFixer\Config::create()
         'function_typehint_space' => true,
         'no_spaces_around_offset' => true,
         'no_leading_import_slash' => true,
+        'class_attributes_separation' => [
+            'elements' => ['const', 'method', 'property']
+        ],
         'blank_line_before_return' => true,
         'combine_consecutive_unsets' => true,
         'no_blank_lines_after_phpdoc' => true,
