@@ -51,6 +51,7 @@ return PhpCsFixer\Config::create()
         ],
         'blank_line_before_return' => true,
         'combine_consecutive_unsets' => true,
+        'method_chaining_indentation' => true,
         'no_blank_lines_after_phpdoc' => true,
         'no_extra_consecutive_blank_lines' => [
             'curly_brace_block',
