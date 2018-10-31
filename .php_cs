@@ -23,6 +23,7 @@ return PhpCsFixer\Config::create()
         'lowercase_cast' => true,
         'no_empty_phpdoc' => true,
         'no_empty_comment' => true,
+        'array_indentation' => true,
         'increment_style' => 'post',
         'short_scalar_cast' => true,
         'method_separation' => true,
