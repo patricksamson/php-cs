@@ -23,6 +23,7 @@ return PhpCsFixer\Config::create()
         'lowercase_cast' => true,
         'no_empty_phpdoc' => true,
         'no_empty_comment' => true,
+        'array_indentation' => true,
         'increment_style' => 'post',
         'short_scalar_cast' => true,
         'method_separation' => true,
@@ -45,8 +46,12 @@ return PhpCsFixer\Config::create()
         'function_typehint_space' => true,
         'no_spaces_around_offset' => true,
         'no_leading_import_slash' => true,
+        'class_attributes_separation' => [
+            'elements' => ['const', 'method', 'property']
+        ],
         'blank_line_before_return' => true,
         'combine_consecutive_unsets' => true,
+        'method_chaining_indentation' => true,
         'no_blank_lines_after_phpdoc' => true,
         'no_extra_consecutive_blank_lines' => [
             'curly_brace_block',
