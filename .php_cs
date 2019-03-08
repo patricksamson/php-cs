@@ -53,7 +53,7 @@ return PhpCsFixer\Config::create()
         'function_typehint_space' => true,
         'no_leading_import_slash' => true,
         'class_attributes_separation' => [
-            'elements' => ['const', 'method', 'property']
+            'elements' => ['const', 'method', 'property'],
         ],
         'blank_line_before_statement' => [
             'statements' => [
@@ -67,7 +67,6 @@ return PhpCsFixer\Config::create()
         ],
         'combine_consecutive_unsets' => true,
         'method_chaining_indentation' => true,
-        'no_blank_lines_after_phpdoc' => true,
         'no_whitespace_in_blank_line' => true,
         'blank_line_after_opening_tag' => true,
         'no_trailing_comma_in_list_call' => true,
@@ -97,18 +96,9 @@ return PhpCsFixer\Config::create()
         'ordered_class_elements' => [
             'order' => [
                 'use_trait',
-                'constant_public',
-                'constant_protected',
-                'constant_private',
-                'property_public',
-                'property_protected',
-                'property_private',
+                'constant',
+                'property',
                 'construct',
-                'method_public',
-                'method_protected',
-                'method_private',
-                'magic',
-                'destruct',
             ],
             'sortAlgorithm' => 'alpha',
         ],
