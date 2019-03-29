@@ -3,7 +3,7 @@
 return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
-        'phpdoc_no_empty_return' => true,
+        'phpdoc_no_empty_return' => false,
         'phpdoc_var_annotation_correct_order' => true,
         'array_syntax' => [
             'syntax' => 'short',
@@ -36,7 +36,7 @@ return PhpCsFixer\Config::create()
         'no_mixed_echo_print' => [
             'use' => 'echo',
         ],
-        'no_unused_imports' => true,
+        'no_unused_imports' => false,
         'binary_operator_spaces' => [
             'default' => 'single_space',
         ],
@@ -99,8 +99,11 @@ return PhpCsFixer\Config::create()
                 'constant',
                 'property',
                 'construct',
+                'public',
+                'protected',
+                'private',
             ],
-            'sortAlgorithm' => 'alpha',
+            'sortAlgorithm' => 'none',
         ],
     ])
     ->setLineEnding("\n");
