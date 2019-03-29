@@ -36,7 +36,7 @@ return PhpCsFixer\Config::create()
         'no_mixed_echo_print' => [
             'use' => 'echo',
         ],
-        'no_unused_imports' => false,
+        'no_unused_imports' => true,
         'binary_operator_spaces' => [
             'default' => 'single_space',
         ],
