@@ -52,9 +52,6 @@ return PhpCsFixer\Config::create()
         ],
         'function_typehint_space' => true,
         'no_leading_import_slash' => true,
-        'class_attributes_separation' => [
-            'elements' => ['const', 'method', 'property'],
-        ],
         'blank_line_before_statement' => [
             'statements' => [
                 'break', 'case', 'continue',
