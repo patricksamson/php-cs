@@ -1,6 +1,17 @@
 <?php
 
+$finder = PhpCsFixer\Finder::create()
+    ->exclude('bootstrap/cache')
+    ->exclude('storage')
+    ->exclude('vendor')
+    ->in(__DIR__ . '/app')
+    ->name('*.php')
+    ->notName('*.blade.php')
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true);
+
 return PhpCsFixer\Config::create()
+    ->setFinder($finder)
     ->setRules([
         '@PSR2' => true,
         'phpdoc_no_empty_return' => false,
