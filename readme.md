@@ -5,16 +5,16 @@
 2. Clone `kirschbaum-development/php-cs` locally
 # IDE Configuration
 ## PHPStorm
-1. On your command terminal, run `composer global require friendsofphp/php-cs-fixer`
-2. From your web app directory, run `git clone git@github.com:kirschbaum-development/php-cs.git`
-3. In PHPStorm, create a file watcher (under "Preferences->Tools"), and edit the following settings:
-
+1. In PHPStorm, create a file watcher (under "Preferences->Tools")
+2. Uncheck all of the "Advanced Options"
+3. Edit the following settings:
 ```
 Name: PHP Style fixer
  File type: PHP
 Path: /{your-global-composer-directory}/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
 Arguments: fix --verbose --config={your-web-apps-root-directory}/php-cs/.php_cs
 ```
+
 ## VS Code
 1. Install PHP CS Fixer extension
 2. Configure Extension, in `Settings as JSON`
