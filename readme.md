@@ -5,15 +5,16 @@
 2. Clone `kirschbaum-development/php-cs` locally
 # IDE Configuration
 ## PHPStorm
-1. Set the correct php cs fixer binary in:
-    - Language & Frameworks -> PHP -> Quality tools
-2. Place the KDG custom .php_cs configuration file in your home directory
-3. Within phpstorm, go to:
-    - Settings -> Editor -> Inspections -> PHP -> Quality tools
-    - Make sure PHP CS Fixer validation is checked
-    - In the right hand pane, after selecting this option, click the browse (`...`) button and select the .php_cs file previously saved in your home directory
-    - Ensure PHP Code Sniffer validation is also set to this Coding Standard in its right pane
-    - Click Apply and OK
+1. On your command terminal, run `composer global require friendsofphp/php-cs-fixer`
+2. From your web app directory, run `git clone git@github.com:kirschbaum-development/php-cs.git`
+3. In PHPStorm, create a file watcher (under "Preferences->Tools"), and edit the following settings:
+
+```
+Name: PHP Style fixer
+ File type: PHP
+Path: /{your-global-composer-directory}/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
+Arguments: fix --verbose --config={your-web-apps-root-directory}/php-cs/.php_cs
+```
 ## VS Code
 1. Install PHP CS Fixer extension
 2. Configure Extension, in `Settings as JSON`
