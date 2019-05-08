@@ -45,7 +45,9 @@ return PhpCsFixer\Config::create()
         // TODO: This isn't working, causes fixer to error.
         // 'increment_style' => ['style' => 'post'],
         'short_scalar_cast' => true,
-        'class_attributes_separation' => ['const', 'property', 'method'],
+        'class_attributes_separation' => [
+            'elements' => ['const', 'method', 'property'],
+        ],
         'no_mixed_echo_print' => [
             'use' => 'echo',
         ],
