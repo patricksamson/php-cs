@@ -118,5 +118,8 @@ return PhpCsFixer\Config::create()
             ],
             'sortAlgorithm' => 'none',
         ],
+		'return_type_declaration' => [
+			'space_before' => 'none'
+		],
     ])
     ->setLineEnding("\n");
