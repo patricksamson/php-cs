@@ -3,6 +3,9 @@
     - `friendsofphp/php-cs-fixer` (minimum version 2.14)
 
 2. Clone `kirschbaum-development/php-cs` locally
+3. `cd kirschbaum-development/php-cs`
+4. `composer install`
+
 # IDE Configuration
 ## PHPStorm
 #### Inspections (fixer does not run, only highlights violations)
@@ -30,6 +33,7 @@ Arguments: fix $FileDir$/$FileName$ --verbose --config={path-to-your-root-php-cs
 1. Install PHP CS Fixer extension
 2. Configure Extension, in `Settings as JSON`
     ```
+    "php-cs-fixer.executablePath": "/path/to/kirschbaum-development/php-cs/vendor/bin/php-cs-fixer",
     "php-cs-fixer.config": ".php-cs;.php-cs.dist;local-clone/php_cs/.php_cs",
     "php-cs-fixer.onsave": true,
     ```
