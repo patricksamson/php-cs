@@ -1,0 +1,14 @@
+{
+    "name": "kirschbaum-development/php-cs",
+    "description": "PHP CS Fixer configuration for Kirschbaum Development Group",
+    "type": "metapackage",
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "authors": [
+        {
+            "name": "Justin Seliga",
+            "email": "justin@kirschbaumdevelopment.com"
+        }
+    ]
+}
