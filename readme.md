@@ -1,10 +1,7 @@
 # Preflight
-1. The following should be installed globally via composer (or another means)
-    - `friendsofphp/php-cs-fixer` (minimum version 2.14)
-
-2. Clone `kirschbaum-development/php-cs` locally
-3. `cd kirschbaum-development/php-cs`
-4. `composer install`
+1. Clone `kirschbaum-development/php-cs`
+2. `cd kirschbaum-development/php-cs`
+3. `composer install`
 
 # IDE Configuration
 ## PHPStorm
