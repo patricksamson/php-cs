@@ -105,6 +105,7 @@ return PhpCsFixer\Config::create()
         'phpdoc_scalar' => true,
         'phpdoc_separation' => true,
         'phpdoc_single_line_var_spacing' => true,
+        'single_trait_insert_per_statement' => true,
         'ordered_class_elements' => [
             'order' => [
                 'use_trait',
