@@ -27,10 +27,12 @@ Path: /{your-global-composer-directory}/vendor/friendsofphp/php-cs-fixer/php-cs-
 Arguments: fix $FileDir$/$FileName$ --verbose --config={path-to-your-root-php-cs-dir}/php-cs/.php_cs
 ```
 ## VS Code
-1. Install PHP CS Fixer extension
+1. Install [PHP CS Fixer](https://marketplace.visualstudio.com/items?itemName=fterrag.vscode-php-cs-fixer) extension
 2. Configure Extension, in `Settings as JSON`
     ```
-    "php-cs-fixer.executablePath": "/path/to/kirschbaum-development/php-cs/vendor/bin/php-cs-fixer",
-    "php-cs-fixer.config": ".php-cs;.php-cs.dist;local-clone/php_cs/.php_cs",
-    "php-cs-fixer.onsave": true,
+    "vscode-php-cs-fixer.config": "/{path_to_repository}/.php_cs",
+    "vscode-php-cs-fixer.toolPath": "/{path_to_repository}/vendor/bin/php-cs-fixer",
+    "[php]": {
+        "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer"
+    },
     ```
