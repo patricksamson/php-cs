@@ -36,3 +36,12 @@ Arguments: fix $FileDir$/$FileName$ --verbose --config={path-to-your-root-php-cs
         "editor.defaultFormatter": "fterrag.vscode-php-cs-fixer"
     },
     ```
+## Sublime Text 3
+1. Find `PHP CS Fixer` using Package Control: Install Package (cmd-shift-p)
+2. Under Preferences -> Package Settings -> PHP CS Fixer -> Settings - User, configure the extension using the following JSON
+    ```
+    {
+        "config": "/path/to/kirschbaum-development/php-cs/.php_cs",
+        "on_save": true,
+    }
+    ```
