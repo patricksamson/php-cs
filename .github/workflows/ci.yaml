@@ -1,0 +1,40 @@
+name: run-tests
+
+on: [push]
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: true
+            matrix:
+                php: [7.3, 7.4, 8.0]
+
+        name: PHP ${{ matrix.php }}
+
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v1
+
+            -   name: Cache dependencies
+                uses: actions/cache@v1
+                with:
+                    path: ~/.composer/cache/files
+                    key: dependencies-php${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php }}
+                    coverage: none
+                    tools: composer:v1
+
+            -   name: Install dependencies
+                run: |
+                    composer --version
+                    composer install
+                    composer dump
+
+            -   name: Attempt PHP-CS-Fixer
+                run: tests/ci-test.sh
