@@ -36,7 +36,7 @@ return $config->setFinder($finder)
             'spacing' => 'one',
         ],
         'ordered_imports' => [
-            'sort_algorithm' => 'alpha',
+            'sort_algorithm' => 'length',
         ],
         'single_quote' => true,
         'lowercase_cast' => true,
